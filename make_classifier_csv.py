@@ -6,6 +6,7 @@ import argparse
 psr = argparse.ArgumentParser()
 psr.add_argument('input_dir', help='Directory containing images inside folders having names - "land","l_w" or "water"')
 args = psr.parse_args()
+
 ld = list(dict())
 for dp,dirs,files in os.walk(args.input_dir):
     for nm in files:
@@ -17,5 +18,3 @@ for dp,dirs,files in os.walk(args.input_dir):
 df = pd.DataFrame(ld)
 
 df.to_csv('classifier.csv', index=False)
-
-df1 = pd.read_csv('classifier.csv')
