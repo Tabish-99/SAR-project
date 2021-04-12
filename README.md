@@ -1,5 +1,6 @@
 # SAR-project
-### Dataset Format:  
-  * Image size: 512x512
-  * Images are inside folder named according to its class(land, l_w or water)
-  * Dataset can have multiple sets of images but should satisfy above condition
+## Procedure
+ * Images should be inside folders named according to their classes(land, l_w or water)
+ * Run make_classifier_csv.py. This will create file classifier.csv
+ * Train classifier model inside Classification.ipynb notebook
+
